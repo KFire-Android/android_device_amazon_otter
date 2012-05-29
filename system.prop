@@ -1,1 +1,5 @@
 setprop ro.cwm.forbid_format /bootloader,/dfs,/backup,/splash
+
+
+#tweak to get usb and adb going automaticly 
+persist.sys.usb.config=mass_storage,adb
