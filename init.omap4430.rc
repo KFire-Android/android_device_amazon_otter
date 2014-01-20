@@ -63,15 +63,12 @@ on fs
 
     # LEDs
     chmod 0777 /dev/ilitek_ctrl
-    chmod 0777 /sys/class/leds/lcd-backlight/brightness
+    chmod 0777 /sys/class/backlight/lcd-backlight/brightness
     chmod 0666 /sys/class/leds/led-green/brightness
     chmod 0666 /sys/class/leds/led-orange/brightness
-    chown system system /sys/class/leds/lcd-backlight/brightness
+    chown system system /sys/class/backlight/lcd-backlight/brightness
     chown system system /sys/class/leds/led-green/brightness
     chown system system /sys/class/leds/led-orange/brightness
-
-    # Set default maximum of 1008 on cpu0 (peformance settings will change this if set by user)
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1008000
 
     #Give system ownership and permission to boost clock for specified timeout
     #Note boost_timeout cannot be changed from application because of dynamic sysfs creation. It will have default value of 3 sec.
