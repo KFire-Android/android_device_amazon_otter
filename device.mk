@@ -37,17 +37,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/twrp.fstab:recovery/root/etc/twrp.fstab
 
-# Prebuilt system/bin
+# Prebuilts
 PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/prebuilt/bin/fix-mac.sh:/system/bin/fix-mac.sh \
-    $(DEVICE_FOLDER)/prebuilt/bin/idme:/system/bin/idme
-
-# Prebuilt system/etc
-PRODUCT_COPY_FILES += \
-    $(DEVICE_FOLDER)/prebuilt/etc/mountd.conf:/system/etc/mountd.conf \
+    $(DEVICE_FOLDER)/prebuilt/bin/idme:/system/bin/idme \
+    $(DEVICE_FOLDER)/prebuilt/lib/libidme.so:/system/lib/libidme.so \
     $(DEVICE_FOLDER)/prebuilt/etc/firmware/ducati-m3.512MB.bin:/system/etc/firmware/ducati-m3.512MB.bin
-
-# Prebuilt system/lib
-PRODUCT_COPY_FILES += \
-    $(DEVICE_FOLDER)/prebuilt/lib/libidme.so:/system/lib/libidme.so
-
